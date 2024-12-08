@@ -6,6 +6,11 @@ app.secret_key = os.urandom(24)
 USERNAME = "admin"
 PASSWORD = "password"
 
+@app.route('/')
+def home():
+    """Главная страница, редирект на логин."""
+    return redirect('/login')
+
 @app.route('/auth_check')
 def auth_check():
     """Проверка авторизационной сессии."""

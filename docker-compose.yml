@@ -28,8 +28,7 @@ services:
   cocalc:
     image: davidstritzl/cocalc
     container_name: cocalc
-    ports:
-      - "8888:443"
+    restart: always
     networks:
       - my-network
 
