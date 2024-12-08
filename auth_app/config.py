@@ -1,0 +1,2 @@
+PASSWORD = 'lms_user'
+USERNAME = 'Q8s2YN34aB'

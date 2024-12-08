@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Redirect Example</title>
+</head>
+<body>
+    <main>
+        <p>Контент</p>
+        <button id="redirectButton">Перейти на сайт</button>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.body;
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+            
+            document.getElementById('redirectButton').addEventListener('click', function() {
+                window.location.href = 'https://lms.tech-lite.ru:8888/';
+            });
+        });
+    </script>
+</body>
+</html>
